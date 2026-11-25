@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "motion": { "type": "http", "url": "https://mcp.motion.dev" },
+    "context7": { "command": "cmd", "args": ["/c", "npx", "-y", "@upstash/context7-mcp"] },
+    "playwright": { "command": "cmd", "args": ["/c", "npx", "-y", "@playwright/mcp@latest"] },
+    "unsplash": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@hanoak/unsplash-mcp-server"],
+      "env": { "UNSPLASH_ACCESS_KEY": "${UNSPLASH_ACCESS_KEY:-}", "UNSPLASH_APP_NAME": "${UNSPLASH_APP_NAME:-}" }
+    }
+  }
+}

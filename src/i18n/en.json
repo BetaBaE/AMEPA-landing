@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "siteName": "AMEPA",
+    "fullName": "Moroccan Association for Drinking Water and Sanitation",
+    "tagline": "Since 1997, AMEPA has brought together Moroccan expertise in water and sanitation.",
+    "tbc": "To be confirmed"
+  },
+  "nav": {
+    "label": "Main navigation",
+    "home": "Home",
+    "amepa": "About AMEPA",
+    "expertise": "Expertise",
+    "events": "Events",
+    "international": "International",
+    "members": "Members",
+    "resources": "Resources",
+    "contact": "Contact",
+    "opportunities": "Opportunities",
+    "news": "News",
+    "join": "Become a member",
+    "open": "Open menu",
+    "close": "Close menu",
+    "skip": "Skip to content",
+    "language": "Language",
+    "breadcrumb": "Breadcrumb",
+    "submenu": "{name} submenu"
+  },
+  "home": {
+    "ctaJoin": "Become a member",
+    "ctaEvents": "See events",
+    "profileLabel": "Diagram of the water cycle: resource, treatment, storage, distribution, wastewater treatment, reuse",
+    "stations": {
+      "source": "Resource",
+      "treatment": "Treatment",
+      "storage": "Storage",
+      "network": "Distribution",
+      "wastewater": "Wastewater",
+      "reuse": "Reuse"
+    },
+    "figures": "AMEPA in figures",
+    "president": "A word from the President",
+    "domains": "Our areas of expertise",
+    "domainsIntro": "Nine areas span the water cycle, from the resource to reuse.",
+    "news": "News",
+    "newsAll": "All news",
+    "events": "Upcoming events",
+    "eventsAll": "See the calendar",
+    "publications": "Recent publications",
+    "publicationsAll": "Open the library",
+    "partners": "Members and partners",
+    "partnersAll": "Browse the directory",
+    "actTitle": "Act together",
+    "act": {
+      "join": {
+        "title": "Join",
+        "text": "Join the operators, manufacturers, engineering firms and contractors brought together by AMEPA.",
+        "cta": "Apply for membership"
+      },
+      "attend": {
+        "title": "Take part",
+        "text": "Attend the sector’s congresses, technical days and B2B meetings.",
+        "cta": "See events"
+      },
+      "cooperate": {
+        "title": "Cooperate",
+        "text": "Set up a technical, scientific or international partnership.",
+        "cta": "Propose a partnership"
+      }
+    },
+    "marqueePause": "Pause scrolling",
+    "marqueePlay": "Resume scrolling"
+  },
+  "amepa": {
+    "title": "About AMEPA",
+    "governance": "Governance",
+    "governanceIntro": "The elected bodies that lead the association.",
+    "organs": {
+      "Bureau": "Executive Bureau",
+      "CA": "Board of Directors",
+      "AG": "General Assembly",
+      "Comité": "Committees"
+    },
+    "reports": "Activity reports",
+    "onThisPage": "On this page",
+    "empty": "The composition of the governing bodies will be published soon."
+  },
+  "expertise": {
+    "title": "Expertise",
+    "intro": "Nine areas, one cycle: produce, distribute, treat, reuse.",
+    "domain": "Area {n}",
+    "stakes": "Key challenges",
+    "relatedEvents": "Related events",
+    "relatedPublications": "Related publications",
+    "next": "Next area",
+    "previous": "Previous area",
+    "all": "All areas",
+    "calls": "Calls for projects",
+    "callsEmpty": "No call for projects is open at the moment."
+  },
+  "events": {
+    "title": "Events",
+    "intro": "Congresses, technical days, training and B2B meetings for the water sector.",
+    "upcoming": "Upcoming",
+    "past": "Archive",
+    "list": "List",
+    "calendar": "Calendar",
+    "view": "View",
+    "allTypes": "All types",
+    "allDomains": "All areas",
+    "type": "Type",
+    "domain": "Area",
+    "emptyUpcoming": "No upcoming event matches these filters. The archive is still available.",
+    "emptyPast": "No archived event matches these filters.",
+    "dateTbc": "Date to be confirmed",
+    "register": "Register",
+    "programme": "Programme",
+    "speakers": "Speakers",
+    "location": "Venue",
+    "date": "Date",
+    "gallery": "Photos",
+    "documents": "Presentations and proceedings",
+    "closed": "This event has ended",
+    "noRegistration": "Registration is not open yet.",
+    "prevMonth": "Previous month",
+    "nextMonth": "Next month",
+    "back": "All events",
+    "count": "{count, plural, =0 {No events} one {# event} other {# events}}",
+    "types": {
+      "Congrès": "Congress",
+      "Journée technique": "Technical day",
+      "Séminaire": "Seminar",
+      "Rencontre B2B": "B2B meeting",
+      "Webinaire": "Webinar",
+      "Formation": "Training",
+      "Visite technique": "Technical visit",
+      "Salon": "Trade show"
+    }
+  },
+  "international": {
+    "title": "International",
+    "mapLabel": "Map of Africa with Morocco highlighted",
+    "missions": "B2B meetings and missions",
+    "missionsEmpty": "No mission is scheduled at the moment.",
+    "cta": "Propose a partnership"
+  },
+  "members": {
+    "title": "Members",
+    "intro": "Operators, engineering firms, contractors, manufacturers, laboratories and experts.",
+    "search": "Search for a member or city",
+    "category": "Category",
+    "all": "All categories",
+    "count": "{count, plural, =0 {No members} one {# member} other {# members}}",
+    "empty": "No member matches this search.",
+    "reset": "Clear filters",
+    "website": "Website",
+    "joinTitle": "Join AMEPA",
+    "joinText": "Benefits, conditions and application form.",
+    "joinCta": "Apply for membership",
+    "categories": {
+      "Opérateur / SRM": "Operator / SRM",
+      "Bureau d'études et ingénierie": "Engineering firm",
+      "Entreprise de travaux": "Contractor",
+      "Industriel": "Manufacturer",
+      "Laboratoire / organisme scientifique": "Laboratory / scientific body",
+      "Expert": "Expert",
+      "Partenaire institutionnel": "Institutional partner",
+      "Partenaire international": "International partner"
+    }
+  },
+  "resources": {
+    "title": "Resources",
+    "intro": "Studies, technical notes, guides, regulations and presentations.",
+    "library": "Library",
+    "search": "Search for a document",
+    "kind": "Document type",
+    "allKinds": "All types",
+    "domain": "Area",
+    "allDomains": "All areas",
+    "count": "{count, plural, =0 {No documents} one {# document} other {# documents}}",
+    "empty": "No document matches this search.",
+    "download": "Download PDF",
+    "pending": "PDF coming soon",
+    "membersOnly": "Members only",
+    "videos": "Video library",
+    "videosEmpty": "The first videos will be published soon.",
+    "watch": "Watch video",
+    "kinds": {
+      "Étude / rapport": "Study / report",
+      "Note technique": "Technical note",
+      "Guide": "Guide",
+      "Présentation": "Presentation",
+      "Réglementation": "Regulation",
+      "Rapport d'activité": "Activity report",
+      "Newsletter": "Newsletter"
+    }
+  },
+  "opportunities": {
+    "title": "Opportunities",
+    "intro": "Tenders, contracts, funding and partner searches.",
+    "kind": "Type",
+    "all": "All types",
+    "deadline": "Deadline",
+    "issuer": "Issued by",
+    "link": "View the notice",
+    "file": "Download the file",
+    "closed": "Closed",
+    "empty": "No opportunity matches these filters.",
+    "matchTitle": "Matchmaking",
+    "matchText": "Looking for a technical partner, a supplier or funding? Describe what you need and AMEPA will pass it on to its members.",
+    "matchCta": "Describe my need",
+    "kinds": {
+      "Appel d'offres": "Tender",
+      "Marché": "Contract",
+      "Financement": "Funding",
+      "Partenariat": "Partnership",
+      "Appel à projets": "Call for projects"
+    }
+  },
+  "news": {
+    "title": "News",
+    "intro": "News from the association and the sector.",
+    "empty": "No news has been published yet.",
+    "back": "All news",
+    "featured": "Featured"
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "A question, a membership, a joint project: write to us.",
+    "details": "Contact details",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "map": "View on map",
+    "socials": "Social media",
+    "choose": "Subject of your message"
+  },
+  "forms": {
+    "contact": "Contact",
+    "adhesion": "Membership",
+    "partenariat": "Partnership",
+    "newsletter": "Newsletter",
+    "name": "Full name",
+    "organisation": "Organisation",
+    "email": "Email",
+    "phone": "Phone",
+    "category": "Member category",
+    "message": "Message",
+    "optional": "optional",
+    "consent": "I agree that AMEPA may process this data to answer my request.",
+    "privacy": "Data protection",
+    "send": "Send message",
+    "sendAdhesion": "Send application",
+    "sendPartenariat": "Send proposal",
+    "sending": "Sending…",
+    "success": "Message sent. AMEPA will reply to the address you provided.",
+    "successNewsletter": "You are subscribed.",
+    "error": "Sending failed. Check your connection and try again.",
+    "rateLimited": "Too many messages in a short time. Wait a few minutes before trying again.",
+    "fix": "Correct the highlighted fields, then send the form again.",
+    "newsletterTitle": "Get the newsletter",
+    "newsletterText": "News, publications and events from AMEPA.",
+    "subscribe": "Subscribe",
+    "errors": {
+      "required": "This field is required.",
+      "email": "Enter a valid email address, for example name@domain.ma.",
+      "consent": "Your agreement is needed to send the form.",
+      "tooLong": "This text is too long."
+    }
+  },
+  "footer": {
+    "explore": "Explore",
+    "association": "The association",
+    "legal": "Legal notice",
+    "credits": "Photo credits",
+    "rights": "© {year} AMEPA. All rights reserved."
+  },
+  "credits": {
+    "title": "Photo credits",
+    "intro": "Authors and sources of the photographs used on this site.",
+    "empty": "The site does not use any stock photography at the moment.",
+    "file": "File",
+    "author": "Photographer",
+    "source": "Source"
+  },
+  "common": {
+    "inFrench": "In French",
+    "onlyFrench": "This content is not available in your language yet. The French version is shown below.",
+    "readMore": "Read more",
+    "download": "Download",
+    "newTab": "new tab",
+    "filters": "Filters"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The address may have changed. Start again from the home page or browse the areas of expertise.",
+    "home": "Back to home"
+  },
+  "error": {
+    "title": "This page could not be displayed",
+    "text": "Try again in a moment.",
+    "retry": "Try again"
+  }
+}

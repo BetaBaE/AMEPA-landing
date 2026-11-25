@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "siteName": "AMEPA",
+    "fullName": "Association Marocaine de l’Eau Potable et de l’Assainissement",
+    "tagline": "Depuis 1997, l’AMEPA fédère l’expertise marocaine de l’eau et de l’assainissement.",
+    "tbc": "À confirmer"
+  },
+  "nav": {
+    "label": "Navigation principale",
+    "home": "Accueil",
+    "amepa": "L’AMEPA",
+    "expertise": "Expertise",
+    "events": "Événements",
+    "international": "International",
+    "members": "Membres",
+    "resources": "Ressources",
+    "contact": "Contact",
+    "opportunities": "Opportunités",
+    "news": "Actualités",
+    "join": "Devenir membre",
+    "open": "Ouvrir le menu",
+    "close": "Fermer le menu",
+    "skip": "Aller au contenu",
+    "language": "Langue",
+    "breadcrumb": "Fil d’Ariane",
+    "submenu": "Sous-menu {name}"
+  },
+  "home": {
+    "ctaJoin": "Devenir membre",
+    "ctaEvents": "Voir les événements",
+    "profileLabel": "Schéma du cycle de l’eau : ressource, traitement, stockage, distribution, épuration, réutilisation",
+    "stations": {
+      "source": "Ressource",
+      "treatment": "Traitement",
+      "storage": "Stockage",
+      "network": "Distribution",
+      "wastewater": "Épuration",
+      "reuse": "Réutilisation"
+    },
+    "figures": "L’AMEPA en chiffres",
+    "president": "Mot du Président",
+    "domains": "Nos domaines d’expertise",
+    "domainsIntro": "Neuf domaines couvrent le cycle de l’eau, de la ressource à la réutilisation.",
+    "news": "Actualités",
+    "newsAll": "Toutes les actualités",
+    "events": "Prochains événements",
+    "eventsAll": "Voir le calendrier",
+    "publications": "Publications récentes",
+    "publicationsAll": "Ouvrir la bibliothèque",
+    "partners": "Membres et partenaires",
+    "partnersAll": "Consulter l’annuaire",
+    "actTitle": "Agir ensemble",
+    "act": {
+      "join": {
+        "title": "Adhérer",
+        "text": "Rejoindre les opérateurs, industriels, bureaux d’études et entreprises réunis par l’AMEPA.",
+        "cta": "Demander une adhésion"
+      },
+      "attend": {
+        "title": "Participer",
+        "text": "Prendre part aux congrès, journées techniques et rencontres B2B du secteur.",
+        "cta": "Voir les événements"
+      },
+      "cooperate": {
+        "title": "Coopérer",
+        "text": "Monter un partenariat technique, scientifique ou international.",
+        "cta": "Proposer un partenariat"
+      }
+    },
+    "marqueePause": "Arrêter le défilement",
+    "marqueePlay": "Reprendre le défilement"
+  },
+  "amepa": {
+    "title": "L’AMEPA",
+    "governance": "Gouvernance",
+    "governanceIntro": "Les instances élues qui conduisent l’association.",
+    "organs": {
+      "Bureau": "Bureau",
+      "CA": "Conseil d’administration",
+      "AG": "Assemblée générale",
+      "Comité": "Comités"
+    },
+    "reports": "Rapports d’activité",
+    "onThisPage": "Sur cette page",
+    "empty": "La composition des instances sera publiée prochainement."
+  },
+  "expertise": {
+    "title": "Expertise",
+    "intro": "Neuf domaines pour un même cycle : produire, distribuer, épurer, réutiliser.",
+    "domain": "Domaine {n}",
+    "stakes": "Enjeux clés",
+    "relatedEvents": "Événements liés",
+    "relatedPublications": "Publications liées",
+    "next": "Domaine suivant",
+    "previous": "Domaine précédent",
+    "all": "Tous les domaines",
+    "calls": "Appels à projets",
+    "callsEmpty": "Aucun appel à projets ouvert pour le moment."
+  },
+  "events": {
+    "title": "Événements",
+    "intro": "Congrès, journées techniques, formations et rencontres B2B du secteur de l’eau.",
+    "upcoming": "À venir",
+    "past": "Archives",
+    "list": "Liste",
+    "calendar": "Calendrier",
+    "view": "Affichage",
+    "allTypes": "Tous les types",
+    "allDomains": "Tous les domaines",
+    "type": "Type",
+    "domain": "Domaine",
+    "emptyUpcoming": "Aucun événement à venir pour ces critères. Les archives restent consultables.",
+    "emptyPast": "Aucun événement archivé pour ces critères.",
+    "dateTbc": "Date à confirmer",
+    "register": "S’inscrire",
+    "programme": "Programme",
+    "speakers": "Intervenants",
+    "location": "Lieu",
+    "date": "Date",
+    "gallery": "Photos",
+    "documents": "Présentations et actes",
+    "closed": "Événement terminé",
+    "noRegistration": "Les inscriptions ne sont pas encore ouvertes.",
+    "prevMonth": "Mois précédent",
+    "nextMonth": "Mois suivant",
+    "back": "Tous les événements",
+    "count": "{count, plural, =0 {Aucun événement} one {# événement} other {# événements}}",
+    "types": {
+      "Congrès": "Congrès",
+      "Journée technique": "Journée technique",
+      "Séminaire": "Séminaire",
+      "Rencontre B2B": "Rencontre B2B",
+      "Webinaire": "Webinaire",
+      "Formation": "Formation",
+      "Visite technique": "Visite technique",
+      "Salon": "Salon"
+    }
+  },
+  "international": {
+    "title": "International",
+    "mapLabel": "Carte de l’Afrique, le Maroc mis en évidence",
+    "missions": "Rencontres et missions B2B",
+    "missionsEmpty": "Aucune mission programmée pour le moment.",
+    "cta": "Proposer un partenariat"
+  },
+  "members": {
+    "title": "Membres",
+    "intro": "Opérateurs, bureaux d’études, entreprises, industriels, laboratoires et experts du secteur.",
+    "search": "Rechercher un membre ou une ville",
+    "category": "Catégorie",
+    "all": "Toutes les catégories",
+    "count": "{count, plural, =0 {Aucun membre} one {# membre} other {# membres}}",
+    "empty": "Aucun membre ne correspond à cette recherche.",
+    "reset": "Effacer les filtres",
+    "website": "Site web",
+    "joinTitle": "Adhérer à l’AMEPA",
+    "joinText": "Avantages, conditions et formulaire de demande.",
+    "joinCta": "Demander une adhésion",
+    "categories": {
+      "Opérateur / SRM": "Opérateur / SRM",
+      "Bureau d'études et ingénierie": "Bureau d’études et ingénierie",
+      "Entreprise de travaux": "Entreprise de travaux",
+      "Industriel": "Industriel",
+      "Laboratoire / organisme scientifique": "Laboratoire / organisme scientifique",
+      "Expert": "Expert",
+      "Partenaire institutionnel": "Partenaire institutionnel",
+      "Partenaire international": "Partenaire international"
+    }
+  },
+  "resources": {
+    "title": "Ressources",
+    "intro": "Études, notes techniques, guides, réglementation et présentations.",
+    "library": "Bibliothèque",
+    "search": "Rechercher un document",
+    "kind": "Type de document",
+    "allKinds": "Tous les types",
+    "domain": "Domaine",
+    "allDomains": "Tous les domaines",
+    "count": "{count, plural, =0 {Aucun document} one {# document} other {# documents}}",
+    "empty": "Aucun document ne correspond à cette recherche.",
+    "download": "Télécharger le PDF",
+    "pending": "PDF à venir",
+    "membersOnly": "Réservé aux membres",
+    "videos": "Vidéothèque",
+    "videosEmpty": "Les premières vidéos seront publiées prochainement.",
+    "watch": "Voir la vidéo",
+    "kinds": {
+      "Étude / rapport": "Étude / rapport",
+      "Note technique": "Note technique",
+      "Guide": "Guide",
+      "Présentation": "Présentation",
+      "Réglementation": "Réglementation",
+      "Rapport d'activité": "Rapport d’activité",
+      "Newsletter": "Newsletter"
+    }
+  },
+  "opportunities": {
+    "title": "Opportunités",
+    "intro": "Appels d’offres, marchés, financements et recherches de partenaires.",
+    "kind": "Type",
+    "all": "Tous les types",
+    "deadline": "Date limite",
+    "issuer": "Émetteur",
+    "link": "Consulter l’annonce",
+    "file": "Télécharger le dossier",
+    "closed": "Clôturé",
+    "empty": "Aucune opportunité publiée pour ces critères.",
+    "matchTitle": "Mise en relation",
+    "matchText": "Vous cherchez un partenaire technique, un fournisseur ou un financement ? Décrivez votre besoin, l’AMEPA le relaie auprès de ses membres.",
+    "matchCta": "Décrire mon besoin",
+    "kinds": {
+      "Appel d'offres": "Appel d’offres",
+      "Marché": "Marché",
+      "Financement": "Financement",
+      "Partenariat": "Partenariat",
+      "Appel à projets": "Appel à projets"
+    }
+  },
+  "news": {
+    "title": "Actualités",
+    "intro": "La vie de l’association et du secteur.",
+    "empty": "Aucune actualité publiée pour le moment.",
+    "back": "Toutes les actualités",
+    "featured": "À la une"
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Une question, une adhésion, un projet commun : écrivez-nous.",
+    "details": "Coordonnées",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "map": "Voir sur la carte",
+    "socials": "Réseaux sociaux",
+    "choose": "Objet de votre message"
+  },
+  "forms": {
+    "contact": "Contact",
+    "adhesion": "Adhésion",
+    "partenariat": "Partenariat",
+    "newsletter": "Newsletter",
+    "name": "Nom et prénom",
+    "organisation": "Organisme",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "category": "Catégorie de membre",
+    "message": "Message",
+    "optional": "facultatif",
+    "consent": "J’accepte que l’AMEPA traite ces données pour répondre à ma demande.",
+    "privacy": "Protection des données",
+    "send": "Envoyer le message",
+    "sendAdhesion": "Envoyer la demande",
+    "sendPartenariat": "Envoyer la proposition",
+    "sending": "Envoi en cours…",
+    "success": "Message envoyé. L’AMEPA vous répondra à l’adresse indiquée.",
+    "successNewsletter": "Inscription enregistrée.",
+    "error": "L’envoi a échoué. Vérifiez votre connexion et réessayez.",
+    "rateLimited": "Trop d’envois rapprochés. Patientez quelques minutes avant de réessayer.",
+    "fix": "Corrigez les champs signalés, puis renvoyez le formulaire.",
+    "newsletterTitle": "Recevoir la newsletter",
+    "newsletterText": "Actualités, publications et événements de l’AMEPA.",
+    "subscribe": "S’inscrire",
+    "errors": {
+      "required": "Ce champ est obligatoire.",
+      "email": "Saisissez une adresse e-mail valide, par exemple nom@domaine.ma.",
+      "consent": "Votre accord est nécessaire pour envoyer le formulaire.",
+      "tooLong": "Ce texte est trop long."
+    }
+  },
+  "footer": {
+    "explore": "Explorer",
+    "association": "L’association",
+    "legal": "Mentions légales",
+    "credits": "Crédits photos",
+    "rights": "© {year} AMEPA. Tous droits réservés."
+  },
+  "credits": {
+    "title": "Crédits photos",
+    "intro": "Auteurs et sources des photographies utilisées sur ce site.",
+    "empty": "Le site n’utilise aucune photographie de banque d’images pour le moment.",
+    "file": "Fichier",
+    "author": "Photographe",
+    "source": "Source"
+  },
+  "common": {
+    "inFrench": "En français",
+    "onlyFrench": "Ce contenu n’est pas encore disponible dans votre langue. Version française ci-dessous.",
+    "readMore": "Lire la suite",
+    "download": "Télécharger",
+    "newTab": "nouvel onglet",
+    "filters": "Filtres"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "L’adresse a peut-être changé. Repartez de l’accueil ou parcourez les domaines d’expertise.",
+    "home": "Retour à l’accueil"
+  },
+  "error": {
+    "title": "La page n’a pas pu s’afficher",
+    "text": "Réessayez dans un instant.",
+    "retry": "Réessayer"
+  }
+}
