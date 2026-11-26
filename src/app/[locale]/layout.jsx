@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 import { ViewTransition } from 'react'
 import { preload } from 'react-dom'
 import Footer from '@/components/Footer'
+import Intro from '@/components/motion/Intro'
 import MotionProvider from '@/components/motion/MotionProvider'
 import SiteHeader from '@/components/motion/SiteHeader'
 import WaterScrollbar from '@/components/motion/WaterScrollbar'
@@ -44,8 +45,9 @@ export default async function LocaleLayout({ children, params }) {
   }
 
   return (
-    <html lang={locale} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={`${heading.variable} ${body.variable}`} data-scroll-behavior="smooth">
+    <html lang={locale} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={`${heading.variable} ${body.variable}`} data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className="flex min-h-dvh flex-col">
+        <Intro />
         <noscript><style>{'.accordion-panel{height:auto!important;opacity:1!important}'}</style></noscript>
         <NextIntlClientProvider>
           <MotionProvider>

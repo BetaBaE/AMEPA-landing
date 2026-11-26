@@ -2,6 +2,7 @@
 //   BASE_URL=http://localhost:3000 node scripts/e2e.mjs
 import assert from 'node:assert/strict'
 import { chromium } from 'playwright-core'
+import ar from '../src/i18n/ar.json' with { type: 'json' }
 
 const base = process.env.BASE_URL || 'http://localhost:3000'
 const browser = await chromium.launch({ channel: 'chrome' })
@@ -126,6 +127,6 @@ await step('menu mobile : ouverture, Échap, navigation', async () => {
 await step('page 404 traduite', async () => {
   const res = await page.goto(`${base}/ar/inconnu`)
   assert.equal(res.status(), 404)
-  await page.getByRole('heading', { name: 'الصفحة غير موجودة' }).waitFor()
+  await page.getByRole('heading', { name: ar.notFound.title }).waitFor()
 })
 await browser.close()

@@ -9,6 +9,10 @@ const MIN = 64
 // Le front d'eau mène, l'arrière suit avec plus d'inertie et un léger dépassement.
 const LEAD = [460, 42]
 const TRAIL = [190, 23]
+// Gouttes : ressorts plus mous, qui traînent derrière la colonne et s'en détachent quand on défile vite.
+const DROPS = [[58, 6.5], [30, 4.6]]
+const DROP_SIZE = [0.9, 0.68]
+const DROP_MAX = 64
 
 const spring = (pos, vel, target, [k, c], dt) => {
   const v = vel + (k * (target - pos) - c * vel) * dt
@@ -45,6 +49,9 @@ export default function WaterScrollbar() {
     let flow = 0
     let energy = 0
     let hover = 0
+    let drops = [[PAD, 0], [PAD, 0]]
+    let dir = 1
+    let passed = ''
 
     const target = () => {
       const { max, run, len } = size.current
@@ -66,6 +73,7 @@ export default function WaterScrollbar() {
       if (reduced || !ready) {
         top = [t0, 0]
         bottom = [t1, 0]
+        drops = drops.map(() => [(t0 + t1) / 2, 0])
         ready = true
       } else {
         // Deux demi-pas : stable même à 30 images par seconde.
@@ -78,19 +86,42 @@ export default function WaterScrollbar() {
         const speed = Math.min(1, Math.abs(dy) / 70 + (Math.abs(top[1]) + Math.abs(bottom[1])) / 2600)
         energy += (speed - energy) * (speed > energy ? 0.3 : 0.045)
         flow += (top[1] + bottom[1]) * 0.5 * dt * 0.75
+        const v = top[1] + bottom[1]
+        if (Math.abs(v) > 30) dir = Math.sign(v)
+        const r = 4 * Math.min(1.08, Math.max(0.72, Math.sqrt((t1 - t0) / Math.max(1, bottom[0] - top[0]))))
+        // L'arrière de la colonne, un peu à l'intérieur : au repos, les gouttes s'y fondent.
+        const tail = dir > 0 ? top[0] + r * 1.3 : bottom[0] - r * 1.3
+        const head = dir > 0 ? bottom[0] - r : top[0] + r
+        drops = drops.map((drop, i) => {
+          for (let j = 0; j < 2; j++) drop = spring(...drop, tail, DROPS[i], dt / 2)
+          let [y, vy] = drop
+          // Jamais devant la colonne, jamais trop loin derrière.
+          if (dir > 0 ? y > head : y < head) [y, vy] = [head, 0]
+          if (Math.abs(y - tail) > DROP_MAX) y = tail + Math.sign(y - tail) * DROP_MAX
+          return [y, vy]
+        })
       }
       const want = root.matches(':hover') || grab.current !== null ? 1 : 0
       hover += (want - hover) * (reduced ? 1 : 0.2)
       const len = bottom[0] - top[0]
       const thin = Math.min(1.08, Math.max(0.72, Math.sqrt((t1 - t0) / Math.max(1, len))))
-      liquid?.draw({ top: top[0], bottom: bottom[0], flow: reduced ? 0 : flow, energy: reduced ? 0 : energy, hover, thin })
+      liquid?.draw({ top: top[0], bottom: bottom[0], flow: reduced ? 0 : flow, energy: reduced ? 0 : energy, hover, thin, drops: drops.map((x) => x[0]), dropSize: DROP_SIZE })
+
+      // Jauge : les repères de section franchis par l'eau passent en aqua.
+      const level = t0 + (t1 - t0) / 2
+      const els = root.querySelectorAll('.water-mark')
+      const reached = points.map((m) => (m.y <= level + 1 ? 1 : 0)).join('') + els.length
+      if (reached !== passed) {
+        passed = reached
+        els.forEach((el, i) => { el.dataset.passed = reached[i] === '1' })
+      }
 
       if (grab.current !== null) {
         const mid = t0 + (t1 - t0) / 2
         tag.current.textContent = points.filter((m) => m.y <= mid + 1).at(-1)?.label ?? ''
         tag.current.style.transform = `translateY(${mid}px) translateY(-50%)`
       }
-      const still = Math.abs(top[0] - t0) < 0.1 && Math.abs(bottom[0] - t1) < 0.1 && energy < 0.004 && Math.abs(hover - want) < 0.005 && Math.abs(top[1]) < 1 && Math.abs(bottom[1]) < 1
+      const still = Math.abs(top[0] - t0) < 0.1 && Math.abs(bottom[0] - t1) < 0.1 && energy < 0.004 && Math.abs(hover - want) < 0.005 && Math.abs(top[1]) < 1 && Math.abs(bottom[1]) < 1 && drops.every(([y, vy]) => Math.abs(vy) < 1 && y >= top[0] - 0.5 && y <= bottom[0] + 0.5)
       if (!still) frame = requestAnimationFrame(tick)
     }
     wake.current = () => {
@@ -111,6 +142,7 @@ export default function WaterScrollbar() {
         return { id: el.id, label: el.textContent, y: PAD + len / 2 + Math.min(1, Math.max(0, at / Math.max(1, max))) * size.current.run }
       })
       setMarks(points)
+      passed = ''
       wake.current()
     }
     const onScroll = () => {

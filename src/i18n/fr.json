@@ -288,12 +288,15 @@
     "readMore": "Lire la suite",
     "download": "Télécharger",
     "newTab": "nouvel onglet",
-    "filters": "Filtres"
+    "filters": "Filtres",
+    "loading": "Chargement…"
   },
   "notFound": {
-    "title": "Page introuvable",
-    "text": "L’adresse a peut-être changé. Repartez de l’accueil ou parcourez les domaines d’expertise.",
-    "home": "Retour à l’accueil"
+    "eyebrow": "Erreur 404",
+    "title": "Cette conduite ne mène nulle part",
+    "text": "La page demandée est introuvable : l’adresse a peut-être changé ou la page a été retirée.",
+    "home": "Retour à l’accueil",
+    "explore": "Ou reprenez le fil"
   },
   "error": {
     "title": "La page n’a pas pu s’afficher",

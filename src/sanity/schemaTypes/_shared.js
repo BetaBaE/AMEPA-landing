@@ -1,3 +1,5 @@
+import { isUniquePerLanguage } from '../lib/isUniquePerLanguage'
+
 // Champs partagés entre plusieurs types.
 export const languageField = {
   name: 'language', type: 'string', readOnly: true, hidden: true,
@@ -7,7 +9,7 @@ export const languageField = {
 export const slugField = (source = 'title') => ({
   name: 'slug', title: 'Adresse de la page', type: 'slug',
   description: 'Cliquez sur « Generate ». Gardez la même adresse dans les trois langues si possible, et ne la modifiez plus après publication.',
-  options: { source, maxLength: 96 },
+  options: { source, maxLength: 96, isUnique: isUniquePerLanguage },
   validation: (r) => r.required(),
 })
 

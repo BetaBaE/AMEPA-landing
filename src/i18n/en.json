@@ -288,12 +288,15 @@
     "readMore": "Read more",
     "download": "Download",
     "newTab": "new tab",
-    "filters": "Filters"
+    "filters": "Filters",
+    "loading": "Loading…"
   },
   "notFound": {
-    "title": "Page not found",
-    "text": "The address may have changed. Start again from the home page or browse the areas of expertise.",
-    "home": "Back to home"
+    "eyebrow": "Error 404",
+    "title": "This pipe leads nowhere",
+    "text": "The page you are looking for cannot be found: the address may have changed or the page has been removed.",
+    "home": "Back to the home page",
+    "explore": "Or pick up the thread"
   },
   "error": {
     "title": "This page could not be displayed",

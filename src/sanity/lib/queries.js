@@ -20,10 +20,10 @@ export const domainsQuery = `*[_type == "domain" && ${inLocale}] | order(order a
 export const domainQuery = `*[_type == "domain" && slug.current == $slug && language in [$locale, "fr"]] | order(select(language == $locale => 0, 1) asc)[0]{ _id, language, title, "slug": slug.current, icon, image${image}, intro, keyStakes, order, ${richBody} }`
 
 export const eventsQuery = `*[_type == "event" && defined(slug.current) && ${inLocale}] | order(startDate asc){ ${eventCard} }`
-export const eventQuery = `*[_type == "event" && slug.current == $slug] | order(select(language == $locale => 0, language == "fr" => 1, 2) asc)[0]{ ${eventCard}, registrationUrl, ${richBody}, speakers, gallery[]${image}, "documents": documents[]{ _key, title, "url": asset->url, "name": asset->originalFilename, "size": asset->size } }`
+export const eventQuery = `*[_type == "event" && slug.current == $slug && language in [$locale, "fr"]] | order(select(language == $locale => 0, 1) asc)[0]{ ${eventCard}, registrationUrl, ${richBody}, speakers, gallery[]${image}, "documents": documents[]{ _key, title, "url": asset->url, "name": asset->originalFilename, "size": asset->size } }`
 
 export const postsQuery = `*[_type == "post" && defined(slug.current) && publishedAt <= now() && ${inLocale}] | order(publishedAt desc)[0...200]{ ${postCard} }`
-export const postQuery = `*[_type == "post" && slug.current == $slug && publishedAt <= now()] | order(select(language == $locale => 0, language == "fr" => 1, 2) asc)[0]{ ${postCard}, ${richBody} }`
+export const postQuery = `*[_type == "post" && slug.current == $slug && publishedAt <= now() && language in [$locale, "fr"]] | order(select(language == $locale => 0, 1) asc)[0]{ ${postCard}, ${richBody} }`
 
 export const publicationsQuery = `*[_type == "publication" && ${inLocale}] | order(date desc){ ${publicationCard} }`
 export const videosQuery = `*[_type == "video" && ${inLocale}] | order(date desc){ _id, language, title, url, date, cover${image} }`
