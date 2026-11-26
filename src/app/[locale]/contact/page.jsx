@@ -5,7 +5,7 @@ import { isTbc, safeHref } from '@/lib/format'
 import { buildMetadata } from '@/lib/seo'
 import { getSettings } from '@/sanity/lib/content'
 
-export const revalidate = 3600
+export const revalidate = 60
 
 export async function generateMetadata({ params }) {
   const { locale } = await params

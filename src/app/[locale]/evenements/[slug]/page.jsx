@@ -11,7 +11,7 @@ import { absolute, buildMetadata } from '@/lib/seo'
 import { getEvent, getEvents, getTranslations as getDocTranslations, isPast } from '@/sanity/lib/content'
 import { hasImage, imageUrl } from '@/sanity/lib/image'
 
-export const revalidate = 3600
+export const revalidate = 60
 
 export async function generateStaticParams({ params }) {
   return (await getEvents(params.locale)).map(({ slug }) => ({ slug }))

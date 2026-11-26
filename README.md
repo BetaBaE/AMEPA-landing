@@ -23,7 +23,7 @@ Sans configuration, le site affiche le contenu de départ de `src/content`. En d
    ```
 3. **Formulaires.** Créer un jeton *Editor* (`SANITY_API_WRITE_TOKEN`) et, pour les e-mails, un compte Resend avec domaine vérifié (`RESEND_API_KEY`, `FORMS_FROM_EMAIL`, `FORMS_TO_EMAIL`). Au moins l'un des deux est nécessaire en production, sinon l'envoi échoue avec un message d'erreur.
 4. **Vercel.** Importer le dépôt depuis un compte de l'AMEPA, recopier les variables, définir `NEXT_PUBLIC_SITE_URL`.
-5. **Webhook.** sanity.io/manage → API → Webhooks : URL `https://<site>/api/revalidate`, événements create, update, delete, filtre `_type != "submission"`, projection `{_type}`, secret identique à `SANITY_REVALIDATE_SECRET`.
+5. **Webhook.** sanity.io/manage → API → Webhooks : URL `https://<site>/api/revalidate` (domaine final, sans redirection), dataset `production`, événements create, update, delete, filtre `_type != "submission" && !(_id in path("drafts.**"))`, projection `{_type}`, méthode POST, « Trigger on drafts » décoché, secret identique à `SANITY_REVALIDATE_SECRET` (aussi dans Vercel → Settings → Environment Variables, puis redéployer). Une publication rafraîchit aussitôt la liste, la fiche, l'accueil et le plan du site dans les trois langues ; sans webhook, chaque page se met à jour d'elle-même en 60 s au plus.
 6. **Ouverture.** Une fois les `[À CONFIRMER]` remplacés, passer `SITE_INDEXABLE=true` et redéployer. Avant cela, `robots.txt` bloque les moteurs de recherche.
 
 ## Contrôles

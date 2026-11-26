@@ -8,7 +8,7 @@ import { Link } from '@/i18n/navigation'
 import { buildMetadata } from '@/lib/seo'
 import { getDomain, getDomains, getEvents, getPublications, getTranslations as getDocTranslations, isPast, sortUpcoming } from '@/sanity/lib/content'
 
-export const revalidate = 3600
+export const revalidate = 60
 
 export async function generateStaticParams({ params }) {
   return (await getDomains(params.locale)).map(({ slug }) => ({ slug }))

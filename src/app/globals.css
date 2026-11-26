@@ -281,6 +281,12 @@ html.intro:not(.intro-leave) :is(.split-word, .hero-wave, .rise, .profile-line, 
 ::view-transition-group(site-header) { z-index: 10; animation: none; }
 ::view-transition-old(site-header) { display: none; }
 ::view-transition-new(site-header) { animation: none; }
+/* Le rideau d'intro passe au-dessus du fondu : sans nom, il resterait dans la capture de la page,
+   sous l'en-tête et le contenu, et disparaîtrait le temps du fondu quand le contenu remplace le squelette. */
+html.intro .intro-screen { view-transition-name: intro-screen; }
+::view-transition-group(intro-screen) { z-index: 20; animation: none; }
+::view-transition-old(intro-screen) { display: none; }
+::view-transition-new(intro-screen) { animation: none; }
 ::view-transition-old(.page-fade), ::view-transition-new(.page-fade) { animation-duration: 0.25s; }
 ::view-transition-group(.morph) { animation-duration: 0.45s; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
 

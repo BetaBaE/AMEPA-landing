@@ -5,7 +5,7 @@ import { FrenchNotice, PageHeader } from '@/components/ui'
 import { buildMetadata } from '@/lib/seo'
 import { getPage, getPageSlugs, getTranslations as getDocTranslations } from '@/sanity/lib/content'
 
-export const revalidate = 3600
+export const revalidate = 60
 
 // Pages qui ont déjà leur propre adresse sur le site.
 const RESERVED = ['amepa', 'international', 'innovation', 'adhesion', 'mentions-legales']

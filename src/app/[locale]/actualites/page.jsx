@@ -5,7 +5,7 @@ import { Empty, PageHeader } from '@/components/ui'
 import { buildMetadata } from '@/lib/seo'
 import { getPosts } from '@/sanity/lib/content'
 
-export const revalidate = 3600
+export const revalidate = 60
 
 export async function generateMetadata({ params }) {
   const { locale } = await params

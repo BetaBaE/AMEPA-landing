@@ -7,7 +7,7 @@ import { formatDate, safeHref } from '@/lib/format'
 import { buildMetadata } from '@/lib/seo'
 import { getDomains, getOpportunities, getPage } from '@/sanity/lib/content'
 
-export const revalidate = 3600
+export const revalidate = 60
 
 export async function generateMetadata({ params }) {
   const { locale } = await params

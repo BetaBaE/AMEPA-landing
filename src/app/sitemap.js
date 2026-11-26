@@ -2,7 +2,7 @@ import { routing } from '@/i18n/routing'
 import { absolute } from '@/lib/seo'
 import { getDomains, getEvents, getPageSlugs, getPosts } from '@/sanity/lib/content'
 
-export const revalidate = 3600
+export const revalidate = 60
 
 const STATIC = ['/', '/amepa', '/expertise', '/evenements', '/international', '/membres', '/membres/adhesion', '/ressources', '/opportunites', '/actualites', '/contact', '/mentions-legales']
 

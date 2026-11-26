@@ -12,7 +12,7 @@ import { absolute, buildMetadata } from '@/lib/seo'
 import { getPost, getPosts, getTranslations as getDocTranslations } from '@/sanity/lib/content'
 import { imageUrl } from '@/sanity/lib/image'
 
-export const revalidate = 3600
+export const revalidate = 60
 
 export async function generateStaticParams({ params }) {
   return (await getPosts(params.locale)).map(({ slug }) => ({ slug }))

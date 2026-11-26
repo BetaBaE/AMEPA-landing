@@ -18,7 +18,7 @@ import { buildMetadata, SITE_URL } from '@/lib/seo'
 import { getDomains, getEvents, getMembers, getPosts, getPublications, getSettings, isPast, sortUpcoming } from '@/sanity/lib/content'
 import { hasImage, imageUrl } from '@/sanity/lib/image'
 
-export const revalidate = 3600
+export const revalidate = 60
 
 export async function generateMetadata({ params }) {
   const { locale } = await params

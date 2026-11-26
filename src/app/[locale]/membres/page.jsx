@@ -5,7 +5,7 @@ import { Link } from '@/i18n/navigation'
 import { buildMetadata } from '@/lib/seo'
 import { getMembers } from '@/sanity/lib/content'
 
-export const revalidate = 3600
+export const revalidate = 60
 
 export async function generateMetadata({ params }) {
   const { locale } = await params

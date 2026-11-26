@@ -12,7 +12,7 @@ export const client = isSanityConfigured
 export async function sanityFetch(query, params = {}, tags = []) {
   // /favicon.ico ou /x.php arrivent ici avec « favicon.ico » comme langue : aucune requête inutile.
   if (params.locale && !routing.locales.includes(params.locale)) notFound()
-  return client.fetch(query, params, { next: { revalidate: 3600, tags: ['sanity', ...tags] } })
+  return client.fetch(query, params, { next: { revalidate: 60, tags: ['sanity', ...tags] } })
 }
 
 // Client d'écriture : réservé à l'enregistrement des formulaires.
