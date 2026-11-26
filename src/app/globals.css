@@ -232,8 +232,21 @@
 /* Intro : rideau d'eau à la première page de la session (voir Intro.jsx). */
 .intro-screen { display: none; } /* jamais « .intro » seul : la classe est aussi posée sur <html> */
 html.intro .intro-screen { position: fixed; inset: 0 0 auto; z-index: 90; display: flex; height: 100dvh; align-items: center; justify-content: center; background: var(--color-ocean-deep); color: #fff; }
-.intro-mark { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; transition: opacity 0.25s, transform 0.5s var(--ease-flow); }
-.intro-drop { width: 4.25rem; }
+.intro-mark { display: flex; flex-direction: column; align-items: center; transition: opacity 0.25s, transform 0.5s var(--ease-flow); }
+.intro-drop { width: 4.75rem; }
+/* La goutte suit le compteur (--p de 0 à 1, posé par le script). */
+.intro-drop .drop-level { animation: none; transform: translateY(calc(80px - var(--p, 0) * 67px)); }
+.intro-percent { margin-top: 1.6rem; font-family: var(--font-heading), sans-serif; font-size: clamp(2.75rem, 2rem + 3vw, 4rem); font-weight: 600; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.intro-count { display: inline-block; min-width: 2.2ch; text-align: end; }
+.intro-sign { margin-inline-start: 0.08em; font-size: 0.45em; vertical-align: 0.95em; color: var(--color-aqua); }
+.intro-pipe { position: relative; display: block; width: 13rem; height: 4px; margin-top: 1.25rem; overflow: hidden; border-radius: 4px; background: rgb(185 205 224 / 0.16); }
+.intro-pipe-fill { position: absolute; inset: 0; transform-origin: left; transform: scaleX(var(--p, 0)); background: linear-gradient(90deg, #0e7cc2, #2ec4b6); }
+/* Reflet qui court dans la conduite */
+.intro-pipe-fill::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.55), transparent) -40% 0 / 40% 100% no-repeat; animation: intro-glint 1.3s linear infinite; }
+[dir="rtl"] .intro-pipe-fill { transform-origin: right; }
+.intro-brand { position: absolute; bottom: clamp(1.75rem, 5vh, 3rem); inset-inline: 0; display: flex; justify-content: center; opacity: 0.85; transition: opacity 0.25s; }
+html.intro-leave .intro-brand { opacity: 0; }
+@keyframes intro-glint { to { background-position: 140% 0; } }
 .intro-edge { position: absolute; top: calc(100% - 1px); inset-inline: 0; width: 100%; height: 40px; }
 html.intro-leave .intro-screen { animation: intro-leave 0.75s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
 html.intro-leave .intro-mark { opacity: 0; transform: translateY(-24px); }
